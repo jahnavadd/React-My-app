@@ -20,14 +20,17 @@ function App() {
   
   const [selectedSort, setSelectedSort] = useState('')
 
-  const getSortedPosts = () => {
+  const sortedPosts = useMemo(() => {
+    console.log("!!!")
     if (selectedSort) {
       return [...posts].sort((a, b) => a[selectedSort].localeCompare(b[selectedSort]));
     }
     return posts;
-  }
-  
-  const sortedPosts = getSortedPosts()
+  }, [selectedSort, posts] )
+
+  const sortAndSearchPosts = useMemo(() => {
+    return sortedPosts.filter(post => post.title.toLowerCase().includes(searchQuery))
+  }, [searchQuery, sortedPosts])
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost])
@@ -63,8 +66,8 @@ function App() {
       />
 
       {
-        posts.length !== 0
-        ? <PostList remove={removePost} title="Posts block" posts={sortedPosts} />
+        sortAndSearchPosts.length !== 0
+        ? <PostList remove={removePost} title="Posts block" posts={sortAndSearchPosts} />
         : <h1 style={{textAlign: 'center'}}>Empty</h1>
       }
       
