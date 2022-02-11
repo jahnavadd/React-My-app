@@ -1,0 +1,30 @@
+a {
+  color: teal;
+}
+a:hover {
+  color: #001a1a;
+}
+a:active {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
+body {
+  background: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+  color: teal;
+  padding: 10px 5px;
+}
+h1:hover {
+  color: #000;
+}
+
+/*# sourceMappingURL=main.css.map */

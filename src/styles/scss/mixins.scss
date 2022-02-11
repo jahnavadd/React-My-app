@@ -1,0 +1,21 @@
+@mixin fontHeading ($fontSize: 30px, $padd...) {
+    font-size: $fontSize;
+    font-weight: 600;
+    font-family: $fontFamily;
+    color: teal;
+    padding: $padd;
+}
+
+@mixin link($color) {
+    color: $color;
+
+    &:hover {
+        color: darken($color, 20%);
+    }
+    &:active {
+        color: darken($color, 30%);
+    }
+    &:visited {
+        color: darken($color, 35%);
+    }
+}

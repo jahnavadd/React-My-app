@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+a {
+    @include link(teal)
+}
+
+body {
+    background: $bgColor;
+    font-family: $fontFamily;
+}
+
+h1 {
+    @include fontHeading(25px, 10px 5px );
+
+    &:hover {
+        color: #000;
+    }
+}
