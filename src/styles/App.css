@@ -10,6 +10,11 @@
 .App {
     width: 800px;
 }
+
+.post_btns {
+  display: flex;
+}
+
 .post {
     padding: 15px;
     margin-top: 15px;
@@ -51,3 +56,31 @@
     transition: opacity 300ms, transform 300ms;
   }
   
+  .pagination {
+    margin: 30px auto;
+    text-align: center;
+  }
+  .pagination .page {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    border: 1px solid teal;
+    cursor: pointer;
+  }
+  .pagination .page_curent {
+    font-weight: 600;
+  }
+
+  .navbar {
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+  }

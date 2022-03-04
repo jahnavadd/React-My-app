@@ -1,0 +1,308 @@
+body.wp-core-ui select:disabled, body .wp-core-ui select:disabled, body input:disabled {
+    color: #000;
+}
+
+body .wp-person a:focus body .gravatar, body a:focus, body a:focus .media-icon img {
+    box-shadow: none;
+    outline: none;
+}
+
+.new-admin-price {
+    width: 100%;
+    margin: 0 0 20px;
+}
+.new-admin-price input[type='number'] {
+    max-width: 150px;
+}
+.new-admin-price label {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.text-result {
+    width: 100%;
+    font-weight: bold;
+    font-size: 22px;
+    width: max-content;
+    padding: 1px 7px;
+}
+
+.table-result {
+    border-collapse: collapse;
+}
+.table-result tr:hover {
+    cursor: pointer;
+}
+.table-result td {
+    padding: 6px;border: 1px solid #000000;
+}
+.week-line label {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.result-message {
+    width: max-content;
+    max-height: 500px;
+    overflow-y: scroll;
+    padding: 20px;
+    border: 2px dotted #164b80;
+}
+.result-line {
+    background: #eee;
+    font-size: 13px;
+    padding: 3px 10px;
+    margin: 5px 0;
+    width: max-content;
+}
+.empty-result-line {
+    color: #ff0000;
+}
+
+body #wpfooter {
+    position: relative;
+}
+
+.form_add_data_to_db {
+    width: max-content;
+}
+.form_add_data_to_db p {
+    margin: 40px 0 0;
+    padding: 40px 0 0;
+    border-top: 1px solid #ddd;
+}
+.form_add_data_to_db label {
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+}
+.form_add_data_to_db label.label-custom-width {
+    min-width: 150px;
+}
+.form_add_data_to_db .select2-container--default .select2-selection--multiple {
+    min-height: 70px;
+}
+.form_add_data_to_db input[type="number"] {
+    width: 52px;
+    font-size: 17px;
+}
+.form_add_data_to_db input[type="submit"] {
+    color: #ffffff;
+    background-color: #164b80;
+    font-size: 22px;
+    font-weight: 300;
+    border-radius: 50px;
+    padding: 8px 80px 8px 80px;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+input.edit-sitepro-booking, p.edit, .button-edit-order  {
+    color: #ffffff;
+    background-color: #164b80;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    width: 65px;
+    display: none;
+}
+p.edit {
+    color: #164b80;
+    background:none;
+    display: block;
+}
+
+
+.edit-order-popup {
+    display: none;
+}
+.edit-order-popup .button-edit-order  {
+    display: block;
+}
+.edit-order {
+    cursor: pointer;
+}
+
+.result-block {
+    padding: 30px;
+    background: #fff;
+    display: flex; 
+    height: max-content;
+}
+.result-block .article {
+    border: none;
+}
+.result-block .pignose-calendar {
+    margin: 0 50px 0 0;
+}
+.result-block #myInput {
+    display: none;
+}
+.result-block #inputSearchOrder {
+    margin-bottom: 10px;
+}
+.result-block #basic {
+    width: 100%; 
+    margin: 0 auto; 
+    margin-top: 0; 
+    padding-top: 0;
+}
+.single-product .result-block #basic {
+    margin: 0; 
+}
+
+.result-table {
+    min-width: 690px;
+}
+.single-product .result-table {
+    min-width: 600px;
+    max-height: 500px;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+
+.calendar .pignose-calendar {
+    width: 100%;
+    max-width: 450px;
+}
+.single-product .result-block {
+    padding: 0;
+    flex-wrap: wrap; 
+    flex-direction: column-reverse;
+}
+.single-product .result-block .pignose-calendar {
+    margin: 0;
+}
+
+.table-result {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 500px;
+}
+
+.table-result td, .table-result th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.table-result td.cards_left_minus {
+    color: #ff0000;
+    direction: ltr;
+    font-weight: 600;
+}
+
+.table-result tr:nth-child(even){background-color: #f2f2f2;}
+
+.table-result tr:hover {background-color: #ddd;}
+
+.table-result th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #164b80;
+  color: white;
+}
+.table-result td p {
+    margin: 0;
+}
+
+
+.list-tab-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px 0 0px;
+}
+.list-tab-products a {
+    padding: 15px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 0;
+    background: #fff;
+    border: 1px solid;
+    margin: 0px 2px;
+    border-bottom: 0px;
+}
+.list-tab-products a.active {
+    color: #fff;
+    background: #164b80;
+}
+
+
+body.woocommerce div.product.elementor form.cart:not(.grouped_form):not(.variations_form) {
+    flex-wrap: wrap;
+}
+
+
+body.woocommerce-checkout.woocommerce-order-received .wc-item-meta-label, body .woocommerce td.product-name .wc-item-meta .wc-item-meta-label {
+    display: none !important;
+}
+body.woocommerce-checkout.woocommerce-order-received ul.wc-item-meta, body .woocommerce td.product-name .wc-item-meta {
+    padding: 0;
+}
+
+
+.buttons-view-booking a {
+    color: #fff !important;
+    background: #164b80;
+    padding: 5px 10px;
+    line-height: 34px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0px 0 0 30px;
+}
+
+body.wp-admin table.display_meta th {
+    display: none;
+}
+
+.message-choose-product {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+
+/* CALENDER RTL */
+html[lang="he-IL"] .pignose-calendar .pignose-calendar-header .pignose-calendar-week, html[lang="he-IL"] .pignose-calendar .pignose-calendar-unit {
+    float: right;    
+}
+html[lang="he-IL"] .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-next {
+    float: left;
+    margin-left: 1.6em;
+}
+html[lang="he-IL"] .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev {
+    float: right;
+    margin-right: 1.6em;
+}
+html[lang="he-IL"] .pignose-calendar .icon-arrow-left:before {
+    content: '\e90a';
+}
+html[lang="he-IL"] .pignose-calendar .icon-arrow-right:before {
+    content: '\e90b';
+}
+/* END CALENDER RTL */
+
+html[lang="en-US"] dt.variation- {
+    display: none !important;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .table-result {
+      display: inline;
+  }
+  .single-product .result-table {
+      min-width: 100px;
+  }
+
+}
