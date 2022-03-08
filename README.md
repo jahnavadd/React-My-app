@@ -105,4 +105,8 @@ https://appodit.com/
 https://www.exacto.co.il/
 http://www.extrainteractive.co.il/
 
+<br>
+______________________________________
 
+
+https://www.taniarascia.com/everything-i-know-as-a-software-developer-without-a-degree/
