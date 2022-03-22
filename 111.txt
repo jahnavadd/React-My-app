@@ -1,0 +1,615 @@
+$P$B1bK6fEURtokP6oMNazZwzD2PWt8o51
+5PE$&gM7XC
+
+
+очистка кеша ssh:
+sudo apt-get autoclean
+
+
+https://snipcart.com/blog/reactjs-wordpress-rest-api-example
+https://blueedge.me/
+https://codemirror.net/doc/manual.html
+
+
+https://habr.com/ru/company/oleg-bunin/blog/499636/
+https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
+
+Parser - HTTrack
+
+
+https://animate.style/
+https://freefrontend.com/css-animation-examples/
+https://codepen.io/toshiya-marukubo/pen/dypmMQq
+
+https://www.cloudways.com/blog/use-react-with-wordpress-to-create-headless-cms/
+
+https://bluetree.ai/
+http://whatismyscreenresolution.net/multi-screen-test
+
+https://rudrastyh.com/woocommerce/order-items.html
+https://www.businessbloomer.com/woocommerce-easily-get-order-info-total-items-etc-from-order-object/
+
+Hooks:
+https://misha.blog/wordpress/actions-and-filters.html
+https://wp-kama.ru/id_6680/kak-rabotayut-huki-v-wordpress-filtry-i-sobytiya.html
+https://docs.oceanwp.org/category/83-woocommerce
+
+Woocommerce:
+https://webformyself.com/category/cms-2/woocommerce-cms-2/
+https://docs.woocommerce.com/wc-apidocs/class-WC_Product.html
+https://rudrastyh.com/woocommerce/if-product-category-page.html
+
+https://misha.blog/
+
+https://htmldom.dev/
+
+https://developer.wordpress.org/reference/functions/
+
+
+Theme WooCommerce 
+https://webformyself.com/vvedenie-v-sozdanie-woocommerce-tem-dlya-wordpress/
+https://webformyself.com/kak-podgotovit-wordpress-temu-k-plaginu-woocommerce/
+https://wp-kama.ru/handbook/theme
+https://wp-kama.ru/id_7654/ierarhiya-fajlov-temy-shablona.html
+
+https://www.youtube.com/watch?v=lB6FRlw94fE
+
+https://opttour.ru/plugins/shablon-vyivoda-kategoriy-woocommerce/
+
+Plugin "Ele Custom Skin" (Add Loop Template)
+
+WooCommerce Currency Switcher
+https://currency-switcher.com/switch-currency-with-language-change/
+
+Woocommerce Product Filter:
+https://products-filter.com/documentation/
+
+
+Forms: 3rd Party Integration (Contact Form 7 => CRM)
+
+Plugin WC City Select
+
+Plugin WP - Simply Show Hooks
+Bellows Accordion Menu 
+Query Monitor
+Yoast SEO - https://yoast.com/help/list-available-snippet-variables-yoast-seo/
+WP Htaccess Editor
+BackWPup – WordPress Backup Plugin
+
+Ускорение - http://rightblog.ru/2632
+https://wplovers.pw/uskorenie-wordpress-pagespeed/
+Кэширование в htaccess - https://www.netangels.ru/support/hosting-old/htaccess-cache/
+Идеальный htaccess - https://habr.com/ru/post/154643/
+Plugin WP-Optimize !!!
+
+Contact Form CFDB7 - сохранение контактов из формы
+
+robots.txt - https://seogio.ru/robots-txt-dlya-wordpress/
+
+Закрыть доступ для всех файлов, кроме указанных форматов
+<FilesMatch "\.(gif|jpg|jpeg|png|mp4|svg|xml)$">
+Allow from all
+</FilesMatch>
+Deny from all
+
+
+
+#CUSTOM
+<ifModule mod_headers.c>
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=43200"
+	</FilesMatch>
+	<FilesMatch "\.(js|css|txt)$">
+		Header set Cache-Control "max-age=604800"
+	</FilesMatch>
+	<FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+		Header set Cache-Control "max-age=2592000"
+	</FilesMatch>
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>
+<ifModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 5 seconds"
+	ExpiresByType image/x-icon "access plus 2592000 seconds"
+	ExpiresByType image/jpeg "access plus 2592000 seconds"
+	ExpiresByType image/png "access plus 2592000 seconds"
+	ExpiresByType image/gif "access plus 2592000 seconds"
+	ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+	ExpiresByType text/css "access plus 604800 seconds"
+	ExpiresByType text/javascript "access plus 604800 seconds"
+	ExpiresByType application/javascript "access plus 604800 seconds"
+	ExpiresByType application/x-javascript "access plus 604800 seconds"
+	ExpiresByType text/html "access plus 43200 seconds"
+	ExpiresByType application/xhtml+xml "access plus 600 seconds"
+</ifModule>
+
+<ifModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+<ifModule mod_gzip.c>
+ mod_gzip_on Yes
+ mod_gzip_dechunk Yes
+ mod_gzip_item_include file .(html?|txt|css|js|php)$
+ mod_gzip_item_include handler ^cgi-script$
+ mod_gzip_item_include mime ^text/.*
+ mod_gzip_item_include mime ^application/x-javascript.*
+ mod_gzip_item_exclude mime ^image/.*
+ mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+#END CUSTOM
+
+
+RewriteRule ^(.*)/?page/(.*)$ /$1 [R=302,NE,L]
+
+
+https://mihalica.ru/kak-zashhitit-svoy-sayt-na-wordpress/#kak-obezopasit-ot-moshennikov-media-papku-uploads
+
+
+Defer parsing of JavaScript - https://kinsta.com/blog/defer-parsing-of-javascript/
+
+function defer_parsing_of_js( $url ) {
+    if ( is_user_logged_in() ) return $url; //don't break WP Admin
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.js' ) ) return $url;
+    return str_replace( ' src', ' defer src', $url );
+}
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10, 3 );
+
+
+
+// INCLUDE FILES IN FUNCTION.PHP
+
+$include_files = array(
+    'theme/header',    
+    'theme/woo_buttons',    
+    'theme/images_scale',  
+    'theme/products',
+);
+
+foreach($include_files as $f){
+    include_once 'inc/' . $f . '.php';
+}
+
+global $product;
+echo $product->get_name();
+	
+add_action( 'wp_loaded', function(){
+	remove_action( 'ocean_before_archive_product_description', 'the_excerpt');
+} );
+
+
+add_filter( 'woocommerce_product_tabs', 'sp_woo_remove_product_tabs', 98 );
+function sp_woo_remove_product_tabs( $tabs ) {
+    unset( $tabs['description'] );          // Remove the description tab
+    return $tabs;
+}
+
+
+
+function input_client() {
+     if ( is_user_logged_in() ) {
+           echo "<a class='user-account' href='/my-account/'>כניסה לאזור אישי</a>";
+        } else {
+            echo "<a class='user-account' href='/my-account/'>כניסה למתקינים</a>";
+        }
+}
+add_shortcode('input_client', 'input_client' );
+
+
+
+
+function hook_javascript() {
+    ?>
+        <script>
+
+        </script>
+    <?php
+}
+add_action('wp_head', 'hook_javascript');
+
+
+add_action( 'wpcf7_init', 'custom_add_shortcode_pdf' );
+
+function custom_add_shortcode_pdf() {
+    wpcf7_add_shortcode( 'return_pdf', 'return_pdf' );
+}
+function return_pdf() {
+   return "!asdffg!";
+}
+
+
+add_action( 'wpcf7_before_send_mail', 'wpcf7_add_text_to_mail_body' );
+function wpcf7_add_text_to_mail_body( $contact_form ) {
+
+    //Get the form ID
+    $form_id = $contact_form->id();
+
+    //Do something specifically for form with the ID "123"
+    if( $form_id == 5074 ) {
+        $submission = WPCF7_Submission::get_instance();
+        $posted_data = $submission->get_posted_data();
+        $values_list = $posted_data['valsitems'];
+        $values_str = implode(", ", $values_list);
+
+        // get mail property
+        $mail = $contact_form->prop( 'mail' ); // returns array 
+
+        // add content to email body
+        $mail['body'] .= 'INDUSTRIES SELECTED';
+        $mail['body'] .= $values_list;
+
+        // set mail property with changed value(s)
+        $contact_form->set_properties( array( 'mail' => $mail ) );
+    }
+}
+
+add_filter( 'woocommerce_product_add_to_cart_text', 'sp_button_add_to_cart_text' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'sp_button_add_to_cart_text' );
+function sp_button_add_to_cart_text() {
+        return __( 'הוסף להצעת מחיר', 'sitepro' );
+}
+
+
+<a href="<?php echo get_term_link($data) ?>"><div class="sp_archive_category_headline">
+	<?php echo get_field('archive_headline', $data); ?>
+</div></a>
+
+
+// INCLUDE CSS (PARENT THEME)
+add_action( 'wp_enqueue_scripts', 'register_my_styles' );
+function register_my_styles() {
+  wp_register_style( 'style1', get_stylesheet_directory_uri().'/style1.css' );
+  wp_enqueue_style( 'style1' );
+}
+
+
+# Функция для подсветки слов поиска в WordPress
+function kama_search_backlight( $text ){
+
+	// Настройки -----------
+	$styles = ['',
+		'color: #fff; background: #ED8A19;',
+	];
+
+	// только для страниц поиска...
+	if ( ! is_search() )
+		return $text;
+
+	$query_terms = get_query_var('search_terms');
+
+	if( empty($query_terms) )
+		$query_terms = array_filter( [ get_query_var('s') ] );
+
+	if( empty($query_terms) )
+		return $text;
+
+	$n = 0;
+	foreach( $query_terms as $term ){
+		$n++;
+
+		$term = preg_quote( $term, '/' );
+		$text = preg_replace_callback( "/$term/iu", function($match) use ($styles,$n){
+			return '<span style="'. $styles[ $n ] .'">'. $match[0] .'</span>';
+		}, $text );
+	}
+
+	return $text;
+}
+
+IMPORT PRODUCTS
+https://qna.habr.com/q/278653
+https://webformyself.com/kak-sozdat-prodvinutyj-poisk-v-wordpress-s-pomoshhyu-wp_query/
+
+https://issue.life/questions/52387665
+
+
+
+https://www.templatemonster.com/help/ru/font-awesome-icons-dont-show.html
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+i, span.fa, span.ab-icon  {
+font-family: fontawesome !important;
+}
+
+
+
+https://tpverstak.ru/cropping-images-css-svg/
+
+PHP CSV - https://wp-kama.ru/id_9114/csv-fajly-na-php-sozdanie-i-chtenie.html
+
+https://www.w3schools.com/
+
+JavaScript
+
+var html1 = document.querySelectorAll("#breadcrumbs span span a");
+var attrlang = document.documentElement.lang;
+if (attrlang == "he-IL")  html1[0].innerHTML="<a href='/'>דף הבית</a>";
+if (attrlang == "en-US")  html1[0].innerHTML="<a href='/'>Home</a>";
+
+
+https://2coders.ru/vydelenie-vsex-elementov-checkbox-s-pomoshhyu-jquery/
+
+
+.jet-sub-mega-menu {
+    width: 129% !important;
+}
+@media only screen and (max-width: 1350px) {
+  .jet-sub-mega-menu {
+    width: 105% !important;
+}
+}
+
+
+
+https://makitweb.com/take-screenshot-of-webpage-with-html2canvas/
+
+
+
+function checkout_top_links() {
+  echo "<div class='checkout_top_links'>";
+  
+  $current_url = $_SERVER["REQUEST_URI"];
+  
+  if (strpos($current_url, "cart")) echo "<ul><li class='active'>סל קניות</li><li><i aria-hidden='true' class='fas fa-arrow-left'></i><a href='/checkout/'>הזמנה</a><i aria-hidden='true' class='fas fa-arrow-left'></i></li><li>
+השלם הזמנה</li></ul>";
+  elseif (strpos($current_url, "order-received")) echo "<ul><li>סל קניות</li><li><i aria-hidden='true' class='fas fa-arrow-left'></i>הזמנה<i aria-hidden='true' class='fas fa-arrow-left'></i></li><li class='active'>
+השלם הזמנה</li></ul>";
+  	elseif (strpos($current_url, "checkout")) echo "<ul><li><a href='/cart/'>סל קניות</a></li><li><i aria-hidden='true' class='fas fa-arrow-left'></i><span  class='active'>הזמנה</span><i aria-hidden='true' class='fas fa-arrow-left'></i></li><li>
+השלם הזמנה</li></ul>";
+  
+  echo "</div>";
+}
+add_shortcode('checkout_top_links', 'checkout_top_links' );
+
+
+function print_menu_shortcode($atts=[], $content = null) {
+    $shortcode_atts = shortcode_atts([ 'name' => '', 'class' => '' ], $atts);
+    $name   = $shortcode_atts['name'];
+    $class  = $shortcode_atts['class'];
+    return wp_nav_menu( array( 'menu' => 'Menu_Professionals', 'menu_class' => $class, 'echo' => false ) );
+}
+add_shortcode('print_menu_shortcode', 'print_menu_shortcode');
+
+
+WordPress shortcode parameters
+function list_cat_mega_menu ($atts) {
+    $atts = shortcode_atts(
+        array(
+            'id_cat' => '0',
+        ), $atts, 'list_cat_mega_menu');
+    
+    $args = array(
+	'show_option_all'    => '',
+	'show_option_none'   => __('No categories'),
+	'orderby'            => 'menu_order',
+	'order'              => 'ASC',
+	'style'              => 'list',
+	'show_count'         => 0,
+	'hide_empty'         => 1,
+	'use_desc_for_title' => 0,
+	'child_of'           => $atts['id_cat'],
+	'feed'               => '',
+	'feed_type'          => '',
+	'feed_image'         => '',
+	'exclude'            => '',
+	'exclude_tree'       => '',
+	'include'            => '',
+	'hierarchical'       => true,
+	'title_li'           => __( 'Categories' ),
+	'number'             => NULL,
+	'echo'               => 1,
+	'depth'              => 0,
+	'current_category'   => 0,
+	'pad_counts'         => 0,
+	'taxonomy'           => 'product_cat',
+	'hide_title_if_empty' => false,
+	'separator'          => '<br />',
+);
+
+echo '<ul class="mega-menu-list-cat">';
+	wp_list_categories( $args );
+echo '</ul>';
+}
+add_shortcode('list_cat_mega_menu', 'list_cat_mega_menu' );
+
+
+
+function main_vertical_scroll($atts=[], $content = null) {
+    $shortcode_atts = shortcode_atts(['ids' => ''], $atts);
+    
+    $ids   = $shortcode_atts['ids'];
+    
+    $ids = $shortcode_atts['ids'];
+    
+    $array_ids = explode(",", $ids);
+    
+    foreach ($array_ids as $value) {
+        echo '<section id="section' . $value . '" class="section-vertical-scroll active">'. do_shortcode( '[elementor-template id="' . $value . '"]' ) .'</section>';
+    }
+}
+add_shortcode('main_vertical_scroll', 'main_vertical_scroll' );
+[main_vertical_scroll ids='582,590,312']
+
+
+
+TRANSLATE
+function woo_custom_change_cart_string($translated_text, $text, $domain) {
+  if (strpos($_SERVER['REQUEST_URI'], "lang=en") === false) {
+    $translated_text = str_replace("מעבר לסל הקניות", "הצגת רשימת מוצרים", $translated_text);
+  }
+  else {
+    $translated_text = str_replace("רשימת מוצרים", "List of products", $translated_text);
+    
+
+  }
+return $translated_text;
+}
+add_filter('gettext', 'woo_custom_change_cart_string', 100, 3);
+add_filter('ngettext', 'woo_custom_change_cart_string', 100, 3);
+
+
+
+
+
+
+
+Отключение вида доставки для класса доставки продукта
+add_filter( 'woocommerce_package_rates', 'businessbloomer_hide_free_shipping_for_shipping_class', 10, 2 );
+function businessbloomer_hide_free_shipping_for_shipping_class( $rates, $package ) {
+    $shipping_class_target = 89;           // ID OF MY SHIPPING_CLASS
+    $in_cart = false;
+    foreach( WC()->cart->cart_contents as $key => $values ) {
+        if( $values[ 'data' ]->get_shipping_class_id() == $shipping_class_target ) {
+            $in_cart = true;
+            break;
+        } 
+    }
+    if( $in_cart ) {
+        unset( $rates['flat_rate:2'] ); 
+        unset( $rates['flat_rate:19'] ); 
+        unset( $rates['local_pickup:4'] );
+    }
+    return $rates;
+}
+
+
+<script>
+document.getElementById("pa_color").onclick = function(){
+    var x = document.getElementById("price");
+var y = document.getElementById("variation-price").innerHTML;
+  if (y == "") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  
+}
+</script>
+
+
+
+ALT / TITLE Product Images
+
+add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
+function change_attachement_image_attributes( $attr, $attachment ){
+    $parent = get_post_field( 'post_parent', $attachment);
+
+    $type = get_post_field( 'post_type', $parent);
+    if( $type != 'product' ){
+        return $attr;
+    }
+
+    if ( isset( $attr['class'] ) && 'custom-logo' === $attr['class'] ) {
+        return $attr;
+    }
+
+    $title = get_post_field( 'post_title', $parent);
+    
+    $terms = get_the_terms( $parent, 'product_cat' );
+        foreach ($terms as $term) {
+            $product_cat = $term->name;
+    }
+    
+    $terms2 = get_the_terms( $parent, "pa_alt-image");
+    foreach ( $terms2 as $term2 ) {
+        $attr_alt_image = $term2->name;
+    }
+    
+    if (!empty($attr_alt_image)) $attr['alt'] = $attr_alt_image;
+        else $attr['alt'] = $product_cat . " - " . $title;
+    $attr['title'] = $title;
+
+    return $attr;
+}
+
+
+Вывод SKU при выборе вариации:
+<div class="product_meta custom">
+		<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+			<span class="sku_wrapper"><?php esc_html_e( 'דגם:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
+		<?php endif; ?>
+</div>
+
+
+add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+
+
+
+IMPORT PRODUCTS (HTML IN CSV)
+define( 'ALLOW_UNFILTERED_UPLOADS', true );
+
+
+HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+ЗАМЕНА ВСЕХ ССЫЛОК С HTTP НА HTTPS
+ob_start();
+function shutdown_func() {
+    $final = '';
+    $levels = ob_get_level();
+    for ($i = 0; $i < $levels; $i++) { $final .= ob_get_clean(); }
+    echo apply_filters('final_output', $final);
+}
+add_action('shutdown', 'shutdown_func', 0);
+
+function replace_func($sContent) { 
+   $sContent = str_replace('http://'.$_SERVER['HTTP_HOST'], 'https://'.$_SERVER['HTTP_HOST'], $sContent);
+   return $sContent; 
+}
+add_filter('final_output', 'replace_func');
+
+
+
+https://alkoweb.ru/prodlit-sessiyu-v-wordpress/
+
+
+https://premmerce.com/woocommerce-hooks-guide/
+
+CHECKOUT FIELDS
+https://rudrastyh.com/woocommerce/checkout-fields.html
+https://coderoad.ru/50107409/%D0%A1%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C-%D0%BF%D0%BE%D0%BB%D1%8F-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B0-%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0-%D0%BD%D0%B5-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B2-WooCommerce
+
+
+Ручная активатия ELEMENTOR PRODUCTS
+/wp-admin/admin.php?page=elementor-license&mode=manually
+License Key - https://my.elementor.com/subscriptions/7442776/
+
+
+
+
+<script>
+// Define the Function targetBlank()
+
+function targetBlank() {
+  // remove subdomain of current site's url and setup regex
+  var internal = location.host.replace("www.", "");
+      internal = new RegExp(internal, "i");
+      
+  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].host; // set the host of each link
+    if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
+      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+	  a[i].setAttribute('rel', 'noopener noreferrer');
+    }
+  }
+};
+
+// Run the function targetBlank()
+
+targetBlank();
+</script>
+
+
+
+
+___________________________________________
+
+Putty (command)
+sudo vim filename и позже Esp ::wq - open and save file
