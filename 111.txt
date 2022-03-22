@@ -5,6 +5,8 @@ $P$B1bK6fEURtokP6oMNazZwzD2PWt8o51
 очистка кеша ssh:
 sudo apt-get autoclean
 
+https://habr.com/ru/post/309958/
+
 Появление элемента при скролле (css + js)
 https://webgolovolomki.com/poyavlenie-elementov-pri-skrolle/
 
