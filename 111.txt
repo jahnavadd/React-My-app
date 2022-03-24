@@ -7,6 +7,8 @@ sudo apt-get autoclean
 
 https://habr.com/ru/post/309958/
 
+https://highlightjs.org/ - подсветка кода pre code
+
 Появление элемента при скролле (css + js)
 https://webgolovolomki.com/poyavlenie-elementov-pri-skrolle/
 
