@@ -9,6 +9,8 @@ https://habr.com/ru/post/309958/
 
 https://highlightjs.org/ - подсветка кода pre code
 
+https://htmlacademy.ru/blog/boost/tutorial/codepen-1
+
 Появление элемента при скролле (css + js)
 https://webgolovolomki.com/poyavlenie-elementov-pri-skrolle/
 
